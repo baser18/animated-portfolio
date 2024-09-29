@@ -1,0 +1,58 @@
+.app{
+    text-align: center;
+}
+
+.wide-layout {
+    width: 100%; /* Adjust width for wider viewport */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  .narrow-layout {
+    width: 100%; /* Full width for narrower viewport */
+  }
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: auto;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    background-color: bisque;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+@mixin mobile {
+    @media (max-width: 738px) {
+      @content;
+    }
+}
+
+@mixin tablet {
+@media (max-width: 1024px) {
+    @content;
+}
+}
+
+@mixin desktop {
+@media (max-width: 1366px) {
+    @content;
+}
+}
