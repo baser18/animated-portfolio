@@ -28,7 +28,12 @@ const App = () => {
   return <div className="app">
     <div className={viewportWidth > 600 ? 'wide-layout' : 'narrow-layout'}>
     <Cursor/>
-    <section id="Homepage">
+    <section className="background-container" id="Homepage">
+      {/* Background video common to both components */}
+      <video autoPlay loop muted className="background-video">
+        <source src="/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
      <Navbar/>
      <Hero/>
     </section>
